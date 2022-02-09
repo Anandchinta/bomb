@@ -2,7 +2,7 @@ let countdown=document.getElementById("countdown");
 let boomEl=document.getElementById("time-bomb");
 let randomNumber=Math.ceil(Math.random()*10);
 let count=10;
-
+let execute=true;
 let intervalId=setInterval(function() {
     count=count-1;
     countdown.textContent=count;
@@ -18,26 +18,38 @@ let intervalId=setInterval(function() {
 
 
 function redbutton(){
-    if (randomNumber%2===1 && count!==0){
-        boomEl.src="didit.jpg";
-        clearInterval(intervalId);
+    if(execute){
+        if (randomNumber%2===1 && count!==0){
+            boomEl.src="didit.jpg";
+            clearInterval(intervalId);
+            execute=false;
+    
+        }
+        else{
+            boomEl.src="boom.jpg";
+            clearInterval(intervalId);
+            countdown.textContent="";
+            execute=false;
+        }
 
     }
-    else{
-        boomEl.src="boom.jpg";
-        clearInterval(intervalId);
-        countdown.textContent="";
-    }
+    
 }
 function bluebutton(){
-    if (randomNumber%2===0 && count!==0){
-        boomEl.src="didit.jpg";
-        clearInterval(intervalId);
+    if (execute){
+        if (randomNumber%2===0 && count!==0){
+            boomEl.src="didit.jpg";
+            clearInterval(intervalId);
+            execute=false;
+    
+        }
+        else{
+            boomEl.src="boom.jpg";
+            clearInterval(intervalId);
+            countdown.textContent="";
+            execute=false;
+        }
 
     }
-    else{
-        boomEl.src="boom.jpg";
-        clearInterval(intervalId);
-        countdown.textContent="";
-    }
+    
 }
