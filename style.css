@@ -1,0 +1,51 @@
+.background{
+    background-color:white;
+    height:100vh;
+}
+.heading{
+    color:rgb(73, 4, 94);
+    padding-top: 45px;
+    text-align: center;
+    font-family:'Lucida Sans';
+    font-size: 24px;
+}
+img{
+   
+    
+    max-width:100%;
+    
+}
+.square{
+    width:600px;
+    height:500px;
+    margin: auto;
+}
+.redbutton{
+    background-color: red;
+    width:70px;
+    height:70px;
+    border-radius: 50px;
+    border-width: 0px;
+    margin-right: 50px;
+    border-width: 2px;
+    border-color: rgb(94, 93, 93);
+
+}
+.bluebutton{
+    background-color:blue;
+    width:70px;
+    height:70px;
+    border-radius: 50px;
+    border-width: 2px;
+    border-color: rgb(94, 93, 93);
+}
+.bttn{
+    text-align: center;
+}
+.count{
+    color: red;
+    font-weight: bolder;
+    font-size: 50px;
+    text-align: center;
+
+}
